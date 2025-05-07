@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #85f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 95%;
+    margin: 20px auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #eb0000;
+}
+
+.mb-3, .mt-3, .my-4 {
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-check, .form-switch, .custom-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.form-check-label {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.form-check-input {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.form-check-input:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 8px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.border, .chart {
+    border: 1px solid #ccc;
+    background: white;
+    padding: 20px;
+    border-radius: 29px;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    background: rgb(92, 233, 255);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.4s;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#scatterplot,#linechart,#barchart{
+    border: 2px solid #858484;
+}

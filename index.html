@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualization Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1 class="text-center mt-3">Project 3: Car Data Visualization</h1>
+      <p class="text-center subtitle">Using the a1-cars dataset</p>
+    </header>
+
+    <main class="container">
+      <div class="control-panel">
+        <div class="form-switch center">
+          <input type="checkbox" id="toggleBrush" class="form-check-input" />
+          <label for="toggleBrush">Interactive Brushing Enabled</label>
+        </div>
+      </div>
+
+      <div class="charts">
+        <div class="chart border rounded mb-3">
+          <h3>Scatter Plot</h3>
+          <div id="scatterplot"></div>
+        </div>
+
+        <div class="chart border rounded mb-3">
+          <h3>Line Chart</h3>
+          <div id="linechart"></div>
+        </div>
+
+        <select id="attributeSelector" class="mb-3 custom-select">
+          <option value="Acceleration">Acceleration</option>
+          <option value="Horsepower">Horsepower</option>
+        </select>
+
+        <div class="form-switch center">
+          <input type="checkbox" id="toggleBrushBar" class="form-check-input" />
+          <label for="toggleBrushBar"
+            >Enable Brushing on Bar Chart for Line chart</label
+          >
+        </div>
+
+        <div class="chart border rounded mb-3">
+          <h3>Bar Chart</h3>
+          <div id="barchart" style="overflow-x: auto"></div>
+        </div>
+      </div>
+    </main>
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-zoom.v2.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      function adjustBarChartWidth(data) {
+        const barWidth = 100;
+        const widthPerBar = data.length * barWidth;
+        const minWidth = 1000;
+        const newWidth = Math.max(widthPerBar, minWidth);
+        document.getElementById("barchart").style.width = `${newWidth}px`;
+      }
+    </script>
+  </body>
+</html>
